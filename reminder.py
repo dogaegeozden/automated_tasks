@@ -101,9 +101,9 @@ def create_a_message():
     # Creating port_scanning_thread which executes the scan_my_ports
     port_scanning_thread = Thread(target=scan_my_ports)
     # Starting all the threads
+    port_scanning_thread.start()
     weather_thread.start()
     datetime_thread.start()
-    port_scanning_thread.start()
     # Waiting untill all threads are done
     weather_thread.join()
     datetime_thread.join()
