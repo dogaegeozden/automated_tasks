@@ -9,4 +9,4 @@ This repository is for my automated tasks. Automation describes a wide range of 
 2) ```cd automated_tasks```
 3) ```pip3 install -r requirements.txt```
 4) ```Edit the credentials.json file write your own credentials```
-5) ```Type crontab -e as the root user and add the fallowing to the end of the file without quotes to send a text message every hour. "45,30 22,21 * * * /usr/bin/python3 /home/username/Desktop/automated_taks/reminder.py"```
+5) ```Type crontab -e as the root user and add the fallowing to the end of the file without quotes to send a text message every hour. "30 22,21 * * * /usr/bin/python3 /home/username/Desktop/automated_taks/reminder.py"```
