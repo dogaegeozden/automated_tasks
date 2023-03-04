@@ -48,7 +48,7 @@ def send_text(message):
     # Creating the twilio client.
     twilio_cli = Client(sid,token)
     # Printing the twilio phone number, target phone number and the message in debug mode.
-    debug(f'From: {my_twilio_number} - To: {target_cell_phone} -- Message: {parse_the_weather_data()}')
+    debug(f'From: {my_twilio_number} - To: {target_cell_phone} - Message: {message}')
     # Sending text message
     message = twilio_cli.messages.create(body=message,from_=my_twilio_number, to=target_cell_phone)
 
@@ -77,6 +77,7 @@ def get_the_date_and_time():
     date_and_time = now.strftime("%m/%d/%Y, %H:%M:%S")
 
 def scan_my_ports():
+    """A function which scans the local machine's ports"""
     # Creating a ip address regular expression to find the ip address.
     ip_address_regex = compile(r'(10|192|172).\d{1,3}\.\d{1,3}.\d{1,3}') # Hint: The Internet Assigned Numbers Authority (IANA) has reserved three blocks of the IP address space for private internets and these are starting with 10, 192 and 172
     # Reading output from the ifconfig system command.
